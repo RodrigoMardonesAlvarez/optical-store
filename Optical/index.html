@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Desarrollo Web Tienda Óptica</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
+</style>
+</head>
+<body class="content" style="max-width:1200px">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar bar-block white collapse top" style="z-index:3;width:250px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <h3 class="wide"><b>MENÚ</b></h3>
+  </div>
+  <div class="padding-64 large text-grey" style="font-weight:bold">
+    <a href="#" class="bar-item button">Accesorios</a>
+    <a href="#" class="bar-item button">Lentes de contacto</a>
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="button block white left-align" id="myBtn">
+    Ver todos <i class="fa fa-caret-down"></i>
+    </a>
+    <div id="demoAcc" class="bar-block hide padding-large medium">
+      <a href="#" class="bar-item button light-grey"><i class="fa fa-caret-right margin-right"></i>Marcos y cristales</a>
+      <a href="#" class="bar-item button">Miopía</a>
+      <a href="#" class="bar-item button">Astigmatismo</a>
+      <a href="#" class="bar-item button">Multifocales</a>
+    </div>
+    <a href="#" class="bar-item button">Filtro luz azul</a>
+    <a href="#" class="bar-item button">Kits de limpieza</a>
+    <a href="#" class="bar-item button">Lágrimas artificiales</a>
+    <a href="#" class="bar-item button">Agendar examen visual</a>
+  </div>
+  <a href="#footer" class="bar-item button padding">Contacto</a> 
+  <a href="javascript:void(0)" class="bar-item button padding" onclick="document.getElementById('newsletter').style.display='block'">Registro</a> 
+  <a href="#footer"  class="bar-item button padding">Nuestra tienda</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <div class="bar-item padding-24 wide">ÓPTICA</div>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:83px"></div>
+  
+  <!-- Top header -->
+  <header class="container xlarge">
+    <p class="left">Marcos y cristales</p>
+    <p class="right">
+      <i class="fa fa-shopping-cart margin-right"></i>
+      <i class="fa fa-search"></i>
+    </p>
+  </header>
+
+  <!-- Image header -->
+  <div class="display-container container">
+    <img src="img/banner002.jpg" alt="Anteojos" style="width:100%">
+    <div class="display-topleft text-white" style="padding:24px 48px">
+      <h1 class="jumbo hide-small">Anteojos</h1>
+      <h1 class="hide-large hide-medium">Anteojos</h1>
+      <h1 class="hide-small">COLECCIÓN 2023</h1>
+      <p><a href="#jeans" class="button black padding-large large">COTIZA</a></p>
+    </div>
+  </div>
+
+  <div class="container text-grey" id="jeans">
+    <p>8 items</p>
+  </div>
+
+<!-- Product grid -->
+<div class="row grayscale">
+    <div class="col l3 s6">
+      <div class="container">
+        <img src="img/lente001a.jpg" style="width:100%">
+        <p>Seen SNJU01<br><b>$69.990</b></p>
+      </div>
+      <div class="container">
+        <img src="img/lente002a.jpg" style="width:100%">
+        <p>Seen SNKF04<br><b>$79.990</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container">
+        <div class="display-container">
+          <img src="img/lente003a.jpg" style="width:100%">
+          <span class="tag display-topleft">Nuevo</span>
+          <div class="display-middle display-hover">
+            <button class="button black">Cotizar</button>
+          </div>
+        </div>
+        <p>Seen SNOU5006<br><b>$89.990</b></p>
+      </div>
+      <div class="container">
+        <img src="img/lente004a.jpg" style="width:100%">
+        <p>DbyD DBOF0035<br><b>$59.990</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container">
+        <img src="img/lente005a.jpg" style="width:100%">
+        <p>DbyD DBOM0028<br><b>$89.990</b></p>
+      </div>
+      <div class="container">
+        <div class="display-container">
+            <img src="img/lente006a.jpg" style="width:100%">
+            <span class="tag display-topleft">Oferta</span>
+            <div class="display-middle display-hover">
+                <button class="button black">Cotizar</button>
+          </div>
+        </div>
+        <p>Dolce & Gabbana 0DG3331<br><b class="text-red">$39.990</b></p>
+      </div>
+    </div>
+
+    <div class="col l3 s6">
+      <div class="container">
+        <img src="img/lente007a.jpg" style="width:100%">
+        <p>Dolce & Gabbana 0DG1322<br><b>$69.990</b></p>
+      </div>
+      <div class="container">
+        <img src="img/lente009a.jpg" style="width:100%">
+        <p>Activ ACKT03<br><b>$79.990</b></p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Subscribe section -->
+  <div class="container black padding-32">
+    <h1>💌 Regístrate</h1>
+    <p>Para recibir descuentos y ofertas especiales</p>
+    <p><input class="input border" type="text" placeholder="Ingrese su e-mail" style="width:100%"></p>
+    <button type="button" class="button red margin-bottom">Suscribirse</button>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="padding-64 light-grey small center" id="footer">
+    <div class="row-padding">
+      <div class="col s4">
+        <h4>Contacto</h4>
+        <p>Cuéntamos cómo ayudarte</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="input border" type="text" placeholder="Nombre" name="Name" required></p>
+          <p><input class="input border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="input border" type="text" placeholder="Asunto" name="Subject" required></p>
+          <p><input class="input border" type="text" placeholder="Mensaje" name="Message" required></p>
+          <button type="submit" class="button block black">Send</button>
+        </form>
+      </div>
+
+      <div class="col s4">
+        <h4>Saber más</h4>
+        <p><a href="#">Quiénes somos</a></p>
+        <p><a href="#">Trabaja con nosotros</a></p>
+        <p><a href="#">Soporte técnico</a></p>
+        <p><a href="#">Encuentra nuestra tienda</a></p>
+        <p><a href="#">Envíos a otras regiones</a></p>
+        <p><a href="#">Términos y condiciones</a></p>
+        <p><a href="#">Política de privacidad</a></p>
+      </div>
+
+      <div class="col s4 justify">
+        <h4>Nuestra Tienda</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> Gran Concepción</p>
+        <p><i class="fa fa-fw fa-phone"></i> +56 00413123</p>
+        <p><i class="fa fa-fw fa-envelope"></i> contacto@tuoptica.cl</p>
+        <h4>Medios de pago</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Bancos nacionales</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Tarjeta de crédito</p>
+        <br>
+        <i class="fa fa-facebook-official hover-opacity large"></i>
+        <i class="fa fa-instagram hover-opacity large"></i>
+        <i class="fa fa-snapchat hover-opacity large"></i>
+        <i class="fa fa-pinterest-p hover-opacity large"></i>
+        <i class="fa fa-twitter hover-opacity large"></i>
+        <i class="fa fa-linkedin hover-opacity large"></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="black center padding-24">Desarrollado por <a href="https://github.com/RodrigoMardonesAlvarez" title="W3.CSS" target="_blank" class="hover-opacity">Rodrigo Mardones</a></div>
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="modal">
+  <div class="modal-content animate-zoom" style="padding:32px">
+    <div class="container white center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove right button transparent xxlarge"></i>
+      <h2 class="wide">RECIBE DESCUENTOS</h2>
+      <p>Registra tu correo para estar al tanto de nuestras ofertas<h2>💌</h2></p>
+      <p><input class="input border" type="text" placeholder="Ingrese su e-mail"></p>
+      <button type="button" class="button padding-large red margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Suscribirse</button>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="js/script.js"></script>
+
+</body>
+</html>
