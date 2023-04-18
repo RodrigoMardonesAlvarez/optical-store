@@ -1,4 +1,4 @@
-// Accordion 
+// Accordion menu
 function myAccFunc() {
     var x = document.getElementById("demoAcc");
     if (x.className.indexOf("show") == -1) {
