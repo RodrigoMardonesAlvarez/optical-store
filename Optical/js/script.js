@@ -7,7 +7,7 @@ function myAccFunc() {
       x.className = x.className.replace(" show", "");
     }
   }
-  // Click on the "Jeans" link on page load to open the accordion for demo purposes
+  // Click on  to open function
   document.getElementById("myBtn").click();
   // Open and close sidebar
   function _open() {
