@@ -18,7 +18,7 @@ body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
 <!-- Sidebar/menu -->
 <nav class="sidebar bar-block white collapse top" style="z-index:3;width:250px" id="mySidebar">
   <div class="container display-container padding-16">
-    <i onclick="w3_close()" class="fa fa-remove hide-large button display-topright"></i>
+    <i onclick="close()" class="fa fa-remove hide-large button display-topright"></i>
     <h3 class="wide"><b>MENÚ</b></h3>
   </div>
   <div class="padding-64 large text-grey" style="font-weight:bold">
@@ -46,11 +46,11 @@ body,h1,h2,h3,h4,h5,h6,.wide {font-family: "Montserrat", sans-serif;}
 <!-- Top menu on small screens -->
 <header class="bar top hide-large black xlarge">
   <div class="bar-item padding-24 wide">ÓPTICA</div>
-  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  <a href="javascript:void(0)" class="bar-item button padding-24 right" onclick="open()"><i class="fa fa-bars"></i></a>
 </header>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="overlay hide-large" onclick="close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="main" style="margin-left:250px">
