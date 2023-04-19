@@ -7,7 +7,7 @@ function myAccFunc() {
       x.className = x.className.replace(" show", "");
     }
   }
-  // Click on  to open function
+  // Click to execute function
   document.getElementById("myBtn").click();
   // Open and close sidebar
   function _open() {
